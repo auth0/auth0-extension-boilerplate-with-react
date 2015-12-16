@@ -1,0 +1,25 @@
+extends ./layout.jade
+
+block title
+  title My Extension
+
+block content
+  script(type='text/babel').
+    var Extension = React.createClass({
+      render: function() {
+        return (
+          <div className="col-xs-10.wrapper">
+            <div className="row">
+              <div className="col-xs-12.content-header">
+                <h1 className="pull-left">My Extension</h1>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <Extension />,
+      document.getElementById('dashboard')
+    );

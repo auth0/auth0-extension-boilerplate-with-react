@@ -1,0 +1,9 @@
+{
+  "name": "My Extension with API",
+  "description": "This is a Hello World extension",
+  "type": "application",
+  "keywords": [
+    "auth0",
+    "extension"
+  ]
+}
