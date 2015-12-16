@@ -1,0 +1,26 @@
+{
+  "name": "auth0-extension",
+  "version": "0.0.1",
+  "description": "My extension for ..",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js && node dist/bundle.js",
+    "test":  "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "auth0",
+    "extension"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3",
+    "webtask-tools": "^1.1.0"
+  },
+  "devDependencies": {
+    "jade": "^1.11.0",
+    "jade-loader": "^0.8.0",
+    "react": "^0.14.3",
+    "webpack": "^1.12.9"
+  }
+}

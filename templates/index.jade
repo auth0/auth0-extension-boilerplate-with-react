@@ -1,0 +1,46 @@
+extends ./layout.jade
+
+block title
+  title My Extension
+
+block content
+  .row
+    #sidebar.col-xs-2
+      a.visible-phone.hide(href='#')
+        i.icon.icon-budicon-497 Dashboard
+      .sidebar-fixed
+        ul
+          li.connections-tab.submenu.active
+            a(href='#')
+              span  My Extension
+            ul
+              li.active
+                a(href='#/connections/custom')
+                  i.icon.icon-budicon-519
+                  span Custom
+          li
+            a(href='https://manage.auth0.com')
+              span Back to Dashboard
+        .sidebar-footer-links
+
+
+    section#dashboard.content-page.current
+
+    script(type='text/babel').
+      var Extension = React.createClass({
+        render: function() {
+          return (
+            <div className="col-xs-10.wrapper">
+              <div className="row">
+                <div className="col-xs-12.content-header">
+                  <h1 className="pull-left">My Extension</h1>
+                </div>
+              </div>
+            </div>
+          );
+        }
+      });
+      ReactDOM.render(
+        <Extension />,
+        document.getElementById('dashboard')
+      );
