@@ -60,7 +60,7 @@ var Section1 = React.createClass({
     return (
       <div className="content-wrapper">
         <div className="content-header">
-          <h1>Sample Extension - Section 1</h1>
+          <h1>My Extension - Section 1</h1>
         </div>
       </div>
     );
@@ -88,7 +88,7 @@ ReactDOM.render((
     <Route path="/section-1" component={Section1}></Route>
     <Route path="*" component={Section1}/>
   </Router>
-), document.getElementById('extension'))
+), document.getElementById('extension'));
 ```
 
 5 Enjoy!
