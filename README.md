@@ -21,40 +21,62 @@ The file contains the styles of an [Auth0](https://auth0.com/) extension and als
 
 This is the file which contains your code.
 
-### Adding a new section
+### Supporting sections
 
-To adding a new section you have to address the following steps:
+To support sections you have to address the following steps:
 
-1 Add the following lines to `layout.jade`
+1. Add the following lines to `layout.jade`
 ```jade
 script(type='text/javascript', src='https://npmcdn.com/react-router/umd/ReactRouter.min.js')
 script(type='text/javascript', src='https://npmcdn.com/history/umd/History.min.js')
 ```
-2 Add a new entry on `./templates/layout.jade` by adding the new link to the menu.
+2. Replace `section.content-page.current` on `./templates/layout.jade` with the following code:
 ```jade
-ul
- li.active
-    a(href='/#/section-2')
-     i.icon.icon-budicon-519
-     span Section 2
+section.content-page.current
+  .col-xs-12
+    .row
+      .col-xs-12.content-header
+        ol.breadcrumb
+          li
+            a(href='http://manage.auth0.com/') Auth0 Dashboard
+          li
+            a(href='#') Extensions
+
+    #sidebar.col-xs-2
+      .sidebar-fixed
+        ul
+          li.active
+            a(href='/#/section-1')
+              i.icon.icon-budicon-519
+              span Section 1
+
+    #extension
+      block content     
 ```
-3 Add your `section-2` component to index.jade
+3. Replace the `Extension` component by `Section1` component on `./templates/index.jade`
 ```js
-var Section2 = React.createClass({
+var Section1 = React.createClass({
   render: function() {
     return (
-      <div className="col-xs-10.wrapper">
-        <div className="row">
-          <div className="col-xs-12.content-header">
-            <h1 className="pull-left">My Extension - Section 2</h1>
-          </div>
+      <div className="content-wrapper">
+        <div className="content-header">
+          <h1>Sample Extension - Section 1</h1>
         </div>
       </div>
     );
   }
 });
 ```
-4 Configure the router
+4. Remove the following lines from `./templates/index.jade`
+
+```js
+ReactDOM.render(
+  <Extension />,
+  document.getElementById('extension')
+);
+```
+
+5. Add router configuration on `./templates/index.jade`
 
 ```js
 var Router  = ReactRouter.Router;
@@ -64,15 +86,18 @@ var history = History.createHashHistory({queryKey: false});
 ReactDOM.render((
   <Router history={history}>
     <Route path="/section-1" component={Section1}></Route>
-    <Route path="/section-2" component={Section2}></Route>
     <Route path="*" component={Section1}/>
   </Router>
-), document.getElementById('dashboard'))
+), document.getElementById('extension'))
 ```
 
 5 Enjoy!
 
 ![](http://auth0.github.io/auth0-extension-boilerplate-with-react/assets/new-section.png)
+
+## Author
+
+[Auth0](auth0.com)
 
 ## What is Auth0?
 
@@ -93,10 +118,6 @@ Auth0 helps you to:
 ## Issue Reporting
 
 If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
-
-## Author
-
-[Auth0](auth0.com)
 
 ## License
 

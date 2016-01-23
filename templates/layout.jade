@@ -26,21 +26,32 @@ html
         window.location.href = '#{baseUrl}/login';
       }
 
-body.a0-extension
-  header.dashboard-header
-    nav.navbar.navbar-default(role='navigation')
-      .container
-        .navbar-header
-          h1.navbar-brand
-            a(href='http://manage.auth0.com/')
-              span Auth0
-        #navbar-collapse.collapse.navbar-collapse
+  body.a0-extension
+    header.dashboard-header
+      nav.navbar.navbar-default(role='navigation')
+        .container
+          .navbar-header
+            h1.navbar-brand
+              a(href='http://manage.auth0.com/')
+                span Auth0
+          #navbar-collapse.collapse.navbar-collapse
           script(type='text/babel').
             ReactDOM.render(
               <Navbar baseUrl="#{baseUrl}"/>,
               document.getElementById('navbar-collapse')
             );
+    .container
+      .row
+        section.content-page.current
+          .col-xs-12
+            .row
+              .col-xs-12.content-header
+                ol.breadcrumb
+                  li
+                    a(href='http://manage.auth0.com/') Auth0 Dashboard
+                  li
+                    a(href='#') Extensions
+                h1 My Extension
 
-  .container
-    #extension.row
-      block content
+            #extension
+              block content

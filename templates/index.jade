@@ -1,44 +1,33 @@
 extends ./layout.jade
 
 block title
-  title Sample Extension
+  title My Extension
 
 block content
   script(type='text/babel').
     var Extension = React.createClass({
       render: function() {
         return (
-          <section className="content-page current">
-            <div className="col-xs-12">
-              <div className="row">
-                <div className="col-xs-12 content-header">
-                  <ol className="breadcrumb">
-                    <li><a href="http://manage.auth0.com/">Auth0 Dashboard</a></li>
-                    <li><a href="#">Extensions</a></li>
-                  </ol>
-                  <h1 className="pull-left">Sample Extension</h1>
-                </div>
-              </div>
-              <div className="widget-title title-with-nav-bars">
-                <ul className="nav nav-tabs">
-                  <li className="active">
-                    <a data-toggle="tab" href="#tab1" aria-expanded="true"><span className="tab-title">Tab 1</span></a>
-                  </li>
-                  <li>
-                    <a data-toggle="tab" href="#tab2"><span className="tab-title">Tab 2</span></a>
-                  </li>
-                  <li>
-                    <a data-toggle="tab" href="#tab3"><span className="tab-title">Tab 3</span></a>
-                  </li>
-                </ul>
-              </div>
-              <div id="content-area" className="tab-content">
-                <div id="tab1" className="tab-pane active">Profile</div>
-                <div id="tab2" className="tab-pane">Messages</div>
-                <div id="tab3" className="tab-pane">Settings</div>
-               </div>
-             </div>
-          </section>
+          <div>
+            <div className="widget-title title-with-nav-bars">
+              <ul className="nav nav-tabs">
+                <li className="active">
+                  <a data-toggle="tab" href="#tab1" aria-expanded="true"><span className="tab-title">Tab 1</span></a>
+                </li>
+                <li>
+                  <a data-toggle="tab" href="#tab2"><span className="tab-title">Tab 2</span></a>
+                </li>
+                <li>
+                  <a data-toggle="tab" href="#tab3"><span className="tab-title">Tab 3</span></a>
+                </li>
+              </ul>
+            </div>
+            <div id="content-area" className="tab-content">
+              <div id="tab1" className="tab-pane active"></div>
+              <div id="tab2" className="tab-pane"></div>
+              <div id="tab3" className="tab-pane"></div>
+            </div>
+          </div>
         );
       }
     });
