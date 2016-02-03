@@ -1,5 +1,8 @@
 {
-  "name": "My Extension with API",
+  "title": "Auth0 Extension with React",
+  "name": "auth0-extension-with-react",
+  "version": "1.0.0",
+  "author": "John Doe",
   "description": "This is a Hello World extension",
   "type": "application",
   "keywords": [
