@@ -15,8 +15,4 @@ app.get('/', function (req, res) {
   }));
 });
 
-if ((process.env.NODE_ENV || 'development') === 'development') {
-  app.listen(3000);
-} else {
-  module.exports = Webtask.fromExpress(app);
-}
+module.exports = app;

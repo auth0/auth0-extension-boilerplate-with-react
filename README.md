@@ -95,6 +95,27 @@ ReactDOM.render((
 
 ![](http://auth0.github.io/auth0-extension-boilerplate-with-react/assets/new-section.png)
 
+## Running locally
+
+To run the sample extension locally:
+
+```bash
+$ npm install
+$ npm start
+```
+
+## Deploying to Webtask.io
+
+If you want to host your extension, you can easily  do it by using [Webtask.io](https://webtask.io).
+
+* Install [wt-cli](https://github.com/auth0/wt-cli) - `npm install -g wt-cli`
+* Install [webpack](https://webpack.github.io/docs/) - `npm install -g webpack`
+* Run `npm run build`
+* Run `wt create ./build/bundle.js --name my-extension --no-parse --no-merge`
+
+Note: For more information about how to setup Webtask, click [here](https://webtask.io/docs/101).
+
+
 ## Author
 
 [Auth0](auth0.com)

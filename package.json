@@ -4,8 +4,8 @@
   "description": "My extension for ..",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js && node dist/bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --config webpack.config.js && node build/bundle.js",
+    "build": "webpack --config webpack.wt.config.js"
   },
   "keywords": [
     "auth0",
@@ -14,14 +14,16 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "auth0-oauth2-express": "0.0.3",
-    "express": "^4.13.3",
+    "auth0-oauth2-express": "1.0.0",
+    "express": "4.12.4",
     "webtask-tools": "^1.1.0"
   },
   "devDependencies": {
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
+    "lodash": "^4.3.0",
     "react": "^0.14.3",
+    "request-promise": "^2.0.0",
     "webpack": "^1.12.9"
   }
 }

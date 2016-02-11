@@ -22,10 +22,10 @@ module.exports = {
     __dirname:  false,
     __filename: true
   },
-  entry: './index',
+  entry: './server',
   externals: readExternals(),
   output: {
-    path: './dist',
+    path: './build',
     filename: 'bundle.js'
   },
   module: {
