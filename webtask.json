@@ -1,10 +1,11 @@
 {
-  "title": "Auth0 Extension with React",
-  "name": "auth0-extension-with-react",
+  "title": "Auth0 Extension Boilerplate with ReactJs",
+  "name": "auth0-extension-boilerplate-with-react",
   "version": "1.0.0",
-  "author": "John Doe",
+  "author": "auth0",
   "description": "This is a Hello World extension",
   "type": "application",
+  "repository": "https://github.com/auth0/auth0-extension-boilerplate-with-react",
   "keywords": [
     "auth0",
     "extension"

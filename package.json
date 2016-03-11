@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --config webpack.config.js && node build/bundle.js",
-    "build": "webpack --config webpack.wt.config.js"
+    "bundle": "webpack --config webpack.wt.config.js",
+    "create": "wt create ./build/bundle.js --name my-extension --no-parse --no-merge",
+    "deploy": "npm run bundle && npm run create"
   },
   "keywords": [
     "auth0",
