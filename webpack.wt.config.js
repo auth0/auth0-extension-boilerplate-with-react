@@ -18,7 +18,11 @@ module.exports = Request.get(LIST_MODULES_URL, { json: true }).then(function (da
     },
     module: {
       loaders: [
-        { test: /\.jade$/, loader: require.resolve('jade-loader') }
+        { test: /\.jade$/, loader: require.resolve('jade-loader') },
+        {
+          test: /\.json?$/,
+          loader: 'json'
+        }
       ]
     },
     externals: _(modules).reduce(function (acc, module) {

@@ -30,7 +30,11 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.jade$/, loader: require.resolve('jade-loader') }
+      { test: /\.jade$/, loader: require.resolve('jade-loader') },
+      {
+        test: /\.json?$/,
+        loader: 'json'
+      }
     ]
   },
   plugins: [

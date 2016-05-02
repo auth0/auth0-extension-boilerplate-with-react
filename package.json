@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --config webpack.config.js && node build/bundle.js",
-    "bundle": "webpack --config webpack.wt.config.js",
-    "create": "wt create ./build/bundle.js --name my-extension --no-parse --no-merge",
-    "deploy": "npm run bundle && npm run create"
+    "bundle": "webpack --config webpack.wt.config.js"
   },
   "keywords": [
     "auth0",
@@ -23,6 +21,7 @@
   "devDependencies": {
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
+    "json-loader": "^0.5.4",
     "lodash": "^4.3.0",
     "react": "^0.14.3",
     "request-promise": "^2.0.0",

@@ -104,16 +104,13 @@ $ npm install
 $ npm start
 ```
 
-## Deploying to Webtask.io
+## Deploying as Auth0 Custom Extension
 
-If you want to host your extension, you can easily  do it by using [Webtask.io](https://webtask.io).
-
-* Install [wt-cli](https://github.com/auth0/wt-cli) - `npm install -g wt-cli`
-* Install [webpack](https://webpack.github.io/docs/) - `npm install -g webpack`
-* Run `npm run deploy`
-
-Note: For more information about how to setup Webtask, click [here](https://webtask.io/docs/101).
-
+1. Go to [Auth0 Extensions](https://manage.auth0.com/#/extensions)
+2. Click on `+ Create Extension`
+3. Fill in the textbox with `https://github.com/auth0/auth0-extension-boilerplate`
+4. Click on `continue`
+5. Finally, click on `install`
 
 ## Author
 
