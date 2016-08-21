@@ -1,0 +1,8 @@
+{
+    "AUTH0_DOMAIN": "YOUR_DOMAIN",
+    "EXTENSION_SECRET": "YOUR_EXTENSION_SECRET",
+    "WT_URL": "http://localhost:3000",
+    "NODE_ENV": "development",
+    "HOSTING_ENV": "default",
+    "PORT": "3000"
+}

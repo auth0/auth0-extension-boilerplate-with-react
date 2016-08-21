@@ -1,6 +1,6 @@
 {
   "name": "auth0-extension-with-react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "My extension for ..",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "auth0-oauth2-express": "1.0.0",
-    "express": "4.12.4",
-    "webtask-tools": "^1.1.0"
+    "auth0-oauth2-express": "^1.1.8",
+    "express": "^4.14.0",
+    "nconf": "^0.8.4",
+    "path": "^0.12.7",
+    "webtask-tools": "^2.2.0"
   },
   "devDependencies": {
     "jade": "^1.11.0",
