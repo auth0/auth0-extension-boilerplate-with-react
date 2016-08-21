@@ -97,7 +97,13 @@ ReactDOM.render((
 
 ## Running locally
 
-To run the sample extension locally:
+Copy sample_config.json as config.json in the same folder and modify according to your Auth0 credentials.
+
+```bash
+$ cp sample_config.json config.json
+```
+
+To run the sample extension locally
 
 ```bash
 $ npm install
