@@ -27,8 +27,8 @@ To support sections you have to address the following steps:
 
 1. Add the following lines to `layout.jade`
 ```jade
-script(type='text/javascript', src='https://npmcdn.com/react-router/umd/ReactRouter.min.js')
-script(type='text/javascript', src='https://npmcdn.com/history/umd/History.min.js')
+script(type='text/javascript', src='https://unpkg.com/react-router/umd/ReactRouter.min.js')
+script(type='text/javascript', src='https://unpkg.com/history/umd/History.min.js')
 ```
 2. Replace `section.content-page.current` on `./templates/layout.jade` with the following code:
 ```jade
